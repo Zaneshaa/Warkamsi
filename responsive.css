@@ -1,0 +1,76 @@
+@media only screen and (min-width: 768px) {
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(255,255,255, 0.95);
+  color: hsl(234, 89.5%, 73.9%);
+  padding: 10px;
+  z-index: 1000;
+}
+
+  .logo {
+  font-weight: bold;
+  font-size: 2rem;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  nav ul.hidden{
+    display: flex;
+    width: auto;
+  }
+  
+  ul li {
+    font-size: 1.2rem;
+    padding: 0 40px;
+  }
+
+  li a {
+    display: flex;
+    flex-direction: row;
+    padding: auto 20px;
+  }
+  
+  /* HOME */
+  p1 {
+    font-size: 2rem;
+  }
+  .p2 {
+    font-size: 1.2rem;
+  }
+  .cta-button a {
+    font-size: 1rem;
+  }
+
+  /* ORDER */
+  form {
+    width: 70%;
+    margin: 50px auto;
+    margin-top: 90px;
+    padding: 20px;
+  }
+  
+  input, label, select {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  /* ABOUT */
+  .about-container {
+    background: silver;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  h2 {
+    
+  }
+  
+  

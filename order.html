@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS -->
+  <link rel="stylesheet" href="pbo.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="responsive.css" type="text/css" media="all" />
+  <!-- ICON -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet"type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <title>Warkamsi</title>
+</head>
+<body id="bg-special">
+  <header class="header">
+    <div id="navbar"></div>
+  </header>
+  <!-- makanan -->
+  <div class="container" aria-label="form-container">
+    <form action="" id="orderform">
+      <label for="makanan">pilih makanan:</label>
+      <select name="makanan" id="makanan">
+        <option value="10000">Mie Goreng - Rp10.000</option>
+        <option value="10000">Mie Soto - Rp10.000</option>
+        <option value="15000">Mie nyemek - Rp15.000</option>
+        <option value="15000">Mie Bangladesh - Rp15.000</option>
+        <option value="0">Tidak memilih</option>
+        
+      </select>
+      
+      <label for="jumlahMakanan">jumlah</label>
+      <input type="number" name="jumlah" id="jumlahMakanan" min="0" value="1" />
+        
+      <!-- minuman -->  
+      <label for="minuman">pilih minuman:</label>
+      <select name="minuman" id="minuman">
+        <option value="5000">Es Teh Manis - Rp5.000</option>
+        <option value="5000">Es Jeruk - Rp5.000</option>
+        <option value="10000">Es Teler - Rp10.000</option>
+        <option value="0">Tidak memilih</option>
+        
+      </select>
+        
+        <label for="jumlahMinuman">jumlah</label>
+        <input type="number" name="jumlah" id="jumlahMinuman" min="0" value="1" />
+        
+        <p>total harga: <b id="totalharga"></b></p>
+    </form>
+  </div>
+  <footer class="footer">
+      &copy; 2025
+  </footer>
+  <script type="text/javascript" src="pbo.js" charset="utf-8">
+  </script>
+</body>
+</html>

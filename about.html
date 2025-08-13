@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+  <link rel="stylesheet" href="pbo.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="responsive.css" type="text/css" media="all" />
+  <!-- ICON -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet"type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <title>Warkamsi</title>
+</head>
+<body>
+    <header class="header">
+    <div id="navbar"></div>
+  </header>
+  <main>
+    <section class="about-container" aria-labelledby="Cerita Abang">
+      <div id="about-me" >
+        <h2 id="head-about-me">Cerita Abang</h2>
+      </div>
+      <div id="psatu" class="hidden">
+          <p>Halo! Gue Joko, Manchester United fans sejati yang kebetulan jago masak Indomie hehe.</p>
+          <p>Dulu gue cuma mahasiswa biasa yang sering kelaparan tengah malam. Setiap kali lapar, pilihan cuma warung tutup atau beli instan di minimarket. Dari situ gue kepikiran - pasti banyak yang ngalamin hal sama!</p>
+          <p>Passion gue masak dimulai dari ngekos. Temen-temen sering minta dibuatin Indomie karena kata mereka 'beda' rasanya. Ternyata rahasia kecilnya di bumbu racikan sendiri dan telur ayam kampung yang selalu fresh.</p>
+          <p>Sekarang alhamdulillah warmindo jadi tempat nongkrong favorit, terutama buat sesama Red Devils yang butuh tempat nobar sambil makan enak. Gue seneng banget liat kalian pada bahagia makan di sini!</p>
+      </div>
+    </section>
+    <section class="about-container" aria-labelledby="Sejarah Warkamsi">
+      <div id="about-warkamsi">
+        <h2 id="head-about-warkamsi">Sejarah Warkamsi</h2>
+      </div>
+        <div id="pdua" class="hidden">
+          <p><b>2018</b> - Mulai dari gerobak kecil di depan kos-kosan Jl. Sudirman</p>
+          <p><b>2019</b> - Pindah ke ruko kecil, mulai terkenal di kalangan mahasiswa</p>
+          <p><b>2020</b> - Survive pandemi dengan fokus delivery, menu bertambah</p>
+          <p><b>2021</b> - Jadi official nobar spot Manchester United fans lokal</p>
+          <p><b>2022</b> - Grand opening tempat sekarang, tambah meja & TV besar</p>
+          <p><b>2024</b> - Jadi warmindo favorit se-kelurahan, 200+ customer tetap</p>
+        </div>
+    </section>
+    <section class="about-container" aria-labelledby=" Lokasi & Jam Operasional">
+      <div id="about-loh">
+        <h2 id="head-about-loh">Lokasi & Jam Operasional</h2>
+        <div id="ptiga" class="hidden">
+        <p>Alamat: Jl. Sudirman No. 45, Belakang Kampus</p>
+        <p>Operating Hours: Senin-Minggu: 16:00 - 02:00<br>
+        Khusus Match King Emyu: 16:00 - 05:00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+    <footer class="footer">
+      &copy; 2025
+  </footer>
+  <script type="text/javascript" src="pbo.js" charset="utf-8"></script>
+<script>
+const aboutMe = document.getElementById('about-me');
+const p1 = document.getElementById('psatu');
+  
+aboutMe.addEventListener("click",() => {
+  console.log("clicked");
+  console.log("before:", p1.classList);
+  p1.classList.toggle('hidden');
+  console.log("after:", p1.classList);
+  
+  const head1 = document.getElementById('head-about-me');
+  if (p1.classList.contains('hidden')) {
+  head1.textContent = 'Cerita Abang';
+  } else {
+  head1.textContent = 'Cerita Abang';
+  }
+});
+
+const aboutWrkmsi = document.getElementById('about-warkamsi');
+const p2 = document.getElementById('pdua');
+  
+aboutWrkmsi.addEventListener("click",() => {
+  console.log("clicked");
+  console.log("before:", p2.classList);
+  p2.classList.toggle('hidden');
+  console.log("after:", p2.classList);
+  
+  const head2 = document.getElementById('head-about-warkamsi');
+  if (p2.classList.contains('hidden')) {
+  head2.textContent = 'Sejarah Warkamsi';
+  } else {
+  head2.textContent = 'Sejarah Warkamsi';
+  }
+});
+
+const aboutLoh = document.getElementById('about-loh');
+const p3 = document.getElementById('ptiga');
+  
+aboutLoh.addEventListener("click",() => {
+  console.log("clicked");
+  console.log("before:", p3.classList);
+  p3.classList.toggle('hidden');
+  console.log("after:", p3.classList);
+  
+  const head3 = document.getElementById('head-about-warkamsi');
+  if (p3.classList.contains('hidden')) {
+  head3.textContent = 'Lokasi & Jam Operasional';
+  } else {
+  head3.textContent = 'Lokasi & Jam Operasional';
+  }
+});
+
+
+</script>
+</body>
+</html>
