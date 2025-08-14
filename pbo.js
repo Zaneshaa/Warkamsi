@@ -18,9 +18,17 @@ document.getElementById('navbar').innerHTML = navbar;
 const menuIcon = document.getElementById('menu-icon');
 const menuList = document.getElementById('menu-list');
 
-menuIcon.addEventListener("click",() => {
+menuIcon.addEventListener("click",(e) => {
+  e.stopPropagation();
   menuList.classList.toggle('hidden');
 });
+
+document.addEventListener("click",(e) => {
+  if(!menuList.contains(e.target) && !menuIcon.contains(e.target)) {
+    menuList.classList.add('hidden');
+  }
+});
+
   // ABOUT
 
 // FORM
@@ -46,3 +54,8 @@ function hitungTotal() {
     
   // Set awal
   hitungTotal();
+  
+  // ORDER BUTTON
+  function toggleOrder() {
+    alert('BAKEKOK');
+  }
