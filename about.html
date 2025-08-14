@@ -26,10 +26,10 @@
         <h2 id="head-about-me">Cerita Abang</h2>
       </div>
       <div id="psatu" class="hidden">
-          <p>Halo! Gue Joko, Manchester United fans sejati yang kebetulan jago masak Indomie hehe.</p>
+          <p>Halo! Gue Amba, fans sejati <span style="color: crimson;">Manchester United</span>  yang kebetulan jago masak Indomie hehe.</p>
           <p>Dulu gue cuma mahasiswa biasa yang sering kelaparan tengah malam. Setiap kali lapar, pilihan cuma warung tutup atau beli instan di minimarket. Dari situ gue kepikiran - pasti banyak yang ngalamin hal sama!</p>
           <p>Passion gue masak dimulai dari ngekos. Temen-temen sering minta dibuatin Indomie karena kata mereka 'beda' rasanya. Ternyata rahasia kecilnya di bumbu racikan sendiri dan telur ayam kampung yang selalu fresh.</p>
-          <p>Sekarang alhamdulillah warmindo jadi tempat nongkrong favorit, terutama buat sesama Red Devils yang butuh tempat nobar sambil makan enak. Gue seneng banget liat kalian pada bahagia makan di sini!</p>
+          <p>Sekarang alhamdulillah warmindo jadi tempat nongkrong favorit, terutama buat sesama <span style="color: crimson;">Red Devils</span> yang butuh tempat nobar sambil makan enak. Gue seneng banget liat kalian pada bahagia makan di sini!</p>
       </div>
     </section>
     <section class="about-container" aria-labelledby="Sejarah Warkamsi">
@@ -49,9 +49,9 @@
       <div id="about-loh">
         <h2 id="head-about-loh">Lokasi & Jam Operasional</h2>
         <div id="ptiga" class="hidden">
-        <p>Alamat: Jl. Sudirman No. 45, Belakang Kampus</p>
-        <p>Operating Hours: Senin-Minggu: 16:00 - 02:00<br>
-        Khusus Match King Emyu: 16:00 - 05:00</p>
+        <p><b>Alamat</b>: Jl. Sudirman No. 45, Belakang Kampus</p>
+        <p><b>Operating Hours</b>: Senin-Minggu: 16:00 - 02:00<br>
+        Khusus Match King <span style="color: crimson;">Emyu</span>: Fleksibel</p>
         </div>
       </div>
     </section>
@@ -61,58 +61,67 @@
   </footer>
   <script type="text/javascript" src="pbo.js" charset="utf-8"></script>
 <script>
-const aboutMe = document.getElementById('about-me');
+<!-- ABOUT ME -->
+const headCerita = document.getElementById('about-me');
 const p1 = document.getElementById('psatu');
+
+headCerita.addEventListener("click",(e) => {
+  e.stopPropagation();
   
-aboutMe.addEventListener("click",() => {
-  console.log("clicked");
-  console.log("before:", p1.classList);
+  p2.classList.add('hidden');
+  p3.classList.add('hidden');
+  
   p1.classList.toggle('hidden');
-  console.log("after:", p1.classList);
-  
-  const head1 = document.getElementById('head-about-me');
-  if (p1.classList.contains('hidden')) {
-  head1.textContent = 'Cerita Abang';
-  } else {
-  head1.textContent = 'Cerita Abang';
-  }
 });
 
-const aboutWrkmsi = document.getElementById('about-warkamsi');
+
+<!-- ABOUT WARKAMSI -->
+const headWrkmsi = document.getElementById('about-warkamsi');
 const p2 = document.getElementById('pdua');
+
+headWrkmsi.addEventListener("click", (e) => {
+  e.stopPropagation();
   
-aboutWrkmsi.addEventListener("click",() => {
-  console.log("clicked");
-  console.log("before:", p2.classList);
+  p1.classList.add('hidden');
+  p3.classList.add('hidden');
+  
   p2.classList.toggle('hidden');
-  console.log("after:", p2.classList);
-  
-  const head2 = document.getElementById('head-about-warkamsi');
-  if (p2.classList.contains('hidden')) {
-  head2.textContent = 'Sejarah Warkamsi';
-  } else {
-  head2.textContent = 'Sejarah Warkamsi';
-  }
 });
 
-const aboutLoh = document.getElementById('about-loh');
+<!-- ABOUT LOH -->
+const headLoh = document.getElementById('about-loh');
 const p3 = document.getElementById('ptiga');
+
+headLoh.addEventListener("click", (e) => {
+  e.stopPropagation();
   
-aboutLoh.addEventListener("click",() => {
-  console.log("clicked");
-  console.log("before:", p3.classList);
+  p1.classList.add('hidden');
+  p2.classList.add('hidden');
+  
   p3.classList.toggle('hidden');
-  console.log("after:", p3.classList);
-  
-  const head3 = document.getElementById('head-about-warkamsi');
-  if (p3.classList.contains('hidden')) {
-  head3.textContent = 'Lokasi & Jam Operasional';
-  } else {
-  head3.textContent = 'Lokasi & Jam Operasional';
-  }
 });
 
+// Auto close semua accordion pas click ruang kosong
+document.addEventListener("click", (e) => {
+  const aboutSections = [
+    { head: headCerita, content: p1 },
+    { head: headWrkmsi, content: p2 },
+    { head: headLoh, content: p3 }
+  ];
+
+  // Cek apakah click di luar semua accordion
+  const isOutsideAccordion = aboutSections.every(section => 
+    !section.head.contains(e.target) && !section.content.contains(e.target)
+  );
+
+  if (isOutsideAccordion) {
+    // Close semua accordion
+    p1.classList.add('hidden');
+    p2.classList.add('hidden');
+    p3.classList.add('hidden');
+  }
+});
 
 </script>
 </body>
-</html>
+  </html>
