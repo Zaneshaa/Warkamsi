@@ -4,12 +4,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Oswald, Belanosima-semibold;
-  letter-spacing: 1px;
+  letter-spacing: 1;
 }
-
 body {
   line-height: 1.6;
-  /* background: linear-gradient(90deg,hsl(230, 93.5%, 81.8%), hsl(252, 94.7%, 85.1%)); */
   background: rgba(0, 0, 0, 0.5);
   background-image: url('img3.jpeg');
   background-size: cover;
@@ -23,9 +21,9 @@ body {
   min-height: 100vh;
 }
 .container {
-  max-width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 /* HEADER */
@@ -107,28 +105,27 @@ li a {
   align-items: center;
   justify-content: center;
 }
-section p {
+section h3 {
   color: rgba(255, 255, 255, 0.90);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 32px;
 }
 .p2 {
-  color: rgba(255 ,255 ,255, 0.7);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin: 10px;
-  padding: 15px 30px;
+  color: rgba(255 ,255 ,255 ,0.85);
+  font-size: 19px;
+  /* line-height: 1.5; */
+  padding:20px 30px;
 }
 .cta-button {
   background: linear-gradient(90deg,hsl(230, 93.5%, 81.8%), hsl(252, 94.7%, 85.1%));
   border: none;
   border-radius: 50px;
-  padding: 15px 20px;
+  padding: 15px 25px;
 }
 .cta-button a {
   text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
+  color: #333;
+  font-size: 19px;
   font-weight: bold;
   
 }
@@ -149,7 +146,20 @@ input, label, select {
   border: none;
   font-size: 17px;
 }
+.wkwk {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
 
+.submit-btn {
+  background: linear-gradient(90deg,hsl(230, 93.5%, 81.8%), hsl(252, 94.7%, 85.1%));
+  border: none;
+  font-size: 17px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
 .footer {
   position: fixed;
   bottom: 0;
@@ -162,30 +172,31 @@ input, label, select {
 
 /* ABOUT */
 .about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.85);
   padding: 10px;
-  line-height: 1.5;
-  cursor: pointer;
+  border: none;
+  margin: 30px 20px;
+  max-width: 100%;
+}
+section .hidden {
+  display: none;
 }
 .about-container:hover {
-  background: rgba(0, 0, 0,0.2);
-  backdrop-filter: blur(8px);
-  transform: translateY(-10px);
-  color: #333;
+  transform:translateY(-10px);
 }
 
-h2 {
-  font-size: 2rem;
-  color: whitesmoke;
+
+section h2 {
+  color:whitesmoke;
+  font-size: 40px;
+  text-align: center;
 }
-#psatu p, #pdua p, #ptiga p {
-  font-size: 1.2rem;
-}
-  
-#psatu.hidden, #pdua.hidden, #ptiga.hidden {
-  display: none !important;
-}
+
+section p {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  }
