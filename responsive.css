@@ -37,19 +37,19 @@
   }
   
   /* HOME */
-  p1 {
+  section h3 {
     font-size: 2rem;
   }
   .p2 {
     font-size: 1.2rem;
   }
   .cta-button a {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   /* ORDER */
   form {
-    width: 70%;
+    width: 80%;
     margin: 50px auto;
     margin-top: 90px;
     padding: 20px;
@@ -57,20 +57,40 @@
   
   input, label, select {
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 5px 0;
-  }
   
+  }
+  .wkwk {
+    display: flex;
+    flex-direction: column;
+  }
+  .submit-btn {
+    width: 100%;
+    padding: 15px 0;
+    margin: auto ;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
   /* ABOUT */
   .about-container {
-    background: silver;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: none;
+    max-width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    justify-content: center;
+    align-content: stretch;
   }
-  
+  section .hidden {
+    display: inline;
+  }
   h2 {
+    text-align: center;
     
   }
   
-  
+   
