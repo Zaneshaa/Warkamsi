@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- CSS -->
+    <!-- CSS -->
   <link rel="stylesheet" href="pbo.css" type="text/css" media="all" />
   <link rel="stylesheet" href="responsive.css" type="text/css" media="all" />
   <!-- ICON -->
@@ -14,17 +14,112 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  <title>Warkamsi</title>
+  <title>Warkamsi/Promo</title>
 </head>
 <body>
     <header class="header">
     <div id="navbar"></div>
   </header>
+  <main>
+    <section class="about-container" aria-labelledby="Cerita Abang">
+      <div id="about-me">
+        <h3 id="head-about-me">Cerita Abang</h3>
+      </div>
+      <div id="psatu" class="hidden">
+          <p>Halo! Gue Amba, fans sejati <span style="color: crimson;">Manchester United</span>  yang kebetulan jago masak Indomie hehe.</p>
+          <p>Dulu gue cuma mahasiswa biasa yang sering kelaparan tengah malam. Setiap kali lapar, pilihan cuma warung tutup atau beli instan di minimarket. Dari situ gue kepikiran - pasti banyak yang ngalamin hal sama!</p>
+          <p>Passion gue masak dimulai dari ngekos. Temen-temen sering minta dibuatin Indomie karena kata mereka 'beda' rasanya. Ternyata rahasia kecilnya di bumbu racikan sendiri dan telur ayam kampung yang selalu fresh.</p>
+          <p>Sekarang alhamdulillah warmindo jadi tempat nongkrong favorit, terutama buat sesama <span style="color: crimson;">Red Devils</span> yang butuh tempat nobar sambil makan enak. Gue seneng banget liat kalian pada bahagia makan di sini!</p>
+      </div>
+    </section>
+    <section class="about-container" aria-labelledby="Sejarah Warkamsi">
+      <div id="about-warkamsi">
+        <h3 id="head-about-warkamsi">Sejarah Warkamsi</h3>
+      </div>
+        <div id="pdua" class="hidden">
+          <p><b>2018</b> - Mulai dari gerobak kecil di depan kos-kosan Jl. Sudirman</p>
+          <p><b>2019</b> - Pindah ke ruko kecil, mulai terkenal di kalangan mahasiswa</p>
+          <p><b>2020</b> - Survive pandemi dengan fokus delivery, menu bertambah</p>
+          <p><b>2021</b> - Jadi official nobar spot Manchester United fans lokal</p>
+          <p><b>2022</b> - Grand opening tempat sekarang, tambah meja & TV besar</p>
+          <p><b>2024</b> - Jadi warmindo favorit se-kelurahan, 200+ customer tetap</p>
+        </div>
+    </section>
+    <section class="about-container" aria-labelledby=" Lokasi & Jam Operasional">
+      <div id="about-loh">
+        <h3 id="head-about-loh">Lokasi & Jam Operasional</h3>
+        <div id="ptiga" class="hidden">
+        <p><b>Alamat</b>: Jl. Sudirman No. 45, Belakang Kampus</p>
+        <p><b>Operating Hours</b>: Senin-Minggu: 16:00 - 02:00<br>
+        Khusus Match King <span style="color: crimson;">Emyu</span>: Fleksibel</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script type="text/javascript" src="pbo.js" charset="utf-8"></script>
+<script>
+<!-- ABOUT ME -->
+const headCerita = document.getElementById('about-me');
+const p1 = document.getElementById('psatu');
+
+headCerita.addEventListener("click",(e) => {
+  e.stopPropagation();
   
-    <footer class="footer">
-      &copy; 2025
-  </footer>
-  <script type="text/javascript" src="pbo.js" charset="utf-8">
-  </script>
+  p2.classList.add('hidden');
+  p3.classList.add('hidden');
+  
+  p1.classList.toggle('hidden');
+});
+
+
+<!-- ABOUT WARKAMSI -->
+const headWrkmsi = document.getElementById('about-warkamsi');
+const p2 = document.getElementById('pdua');
+
+headWrkmsi.addEventListener("click", (e) => {
+  e.stopPropagation();
+  
+  p1.classList.add('hidden');
+  p3.classList.add('hidden');
+  
+  p2.classList.toggle('hidden');
+});
+
+<!-- ABOUT LOH -->
+const headLoh = document.getElementById('about-loh');
+const p3 = document.getElementById('ptiga');
+
+headLoh.addEventListener("click", (e) => {
+  e.stopPropagation();
+  
+  p1.classList.add('hidden');
+  p2.classList.add('hidden');
+  
+  p3.classList.toggle('hidden');
+});
+
+// Auto close semua accordion pas click ruang kosong
+document.addEventListener("click", (e) => {
+  const aboutSections = [
+    { head: headCerita, content: p1 },
+    { head: headWrkmsi, content: p2 },
+    { head: headLoh, content: p3 }
+  ];
+
+  // Cek apakah click di luar semua accordion
+  const isOutsideAccordion = aboutSections.every(section => 
+    !section.head.contains(e.target) && !section.content.contains(e.target)
+  );
+
+  if (isOutsideAccordion) {
+    // Close semua accordion
+    p1.classList.add('hidden');
+    p2.classList.add('hidden');
+    p3.classList.add('hidden');
+  }
+});
+
+</script>
 </body>
-</html>
+  </html>
