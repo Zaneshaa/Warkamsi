@@ -6,9 +6,9 @@ const navbar = `<nav class="navbar">
       </div>
       <ul id="menu-list" class="hidden">
         <li><a href="home.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
         <li><a href="order.html">Order</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="promo.html">Promo</a></li>
       </ul>
     </nav>
 `
@@ -29,7 +29,72 @@ document.addEventListener("click",(e) => {
   }
 });
 
-  // ABOUT
+// FOOTER MENU 
+const footer = `
+ <footer class="footer">
+    <div class="footcont">
+      <div class="container">
+        <div id="promo">
+          <h3>Promo</h3>
+        </div>
+        <div id="contentpromo" class="hidden">
+          <p>🔴⚪⚫ Promo Fans King <span style="color: crimson;">EMYU</span></p>
+          <p>🎓 Diskon Pelajar</p>
+          <p>🌶️ Promo Tantangan</p>
+        </div>
+      </div>
+      <div class="container">
+        <div id="lokjo">
+          <h3>Lokasi & Jam Operasional</h3>
+        </div>
+        <div id="contentlokjo" class="hidden">
+          <p><b>Alamat</b>: Jl. Sudirman No. 45, Belakang Kampus</p>
+          <p><b>Jam Operasional</b>: Senin-Minggu: 16:00 - 02:00<br>
+          Khusus Match King <span style="color: crimson;">EMYU</span>: Fleksibel</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="sosmed-grid">
+        <div class="sosmed-card">
+          <i class="ph ph-whatsapp-logo"><a href=""></a></i>
+        </div>
+        <div class="sosmed-card">
+          <i class="ph ph-instagram-logo"><a href=""></a></i>
+        </div>
+        <div class="sosmed-card">
+          <i class="ph ph-tiktok-logo"></i>
+        </div>
+        <div class="sosmed-card">
+          <i class="ph ph-x-logo"></i>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footcpr">
+      &copy; 2025 Warkamsi. Semua hak cipta dilindungi.
+      <p>Dilarang menggoda kasir kami, hatinya udah punya abang.</p>
+    </div>
+  </footer>
+`
+// LOAD FOOTER
+document.getElementById('footer').innerHTML = footer;
+
+const promo = document.getElementById('promo');
+const contentpromo = document.getElementById('contentpromo');
+
+promo.addEventListener("click", (e) => {
+  e.stopPropagation();
+  contentpromo.classList.toggle('hidden');
+});
+
+const lokjo = document.getElementById('lokjo');
+const contentlokjo = document.getElementById('contentlokjo');
+
+lokjo.addEventListener("click", (e) => {
+  contentlokjo.classList.toggle('hidden');
+})
+// ABOUT
 
 // FORM
 const makanan = document.getElementById('makanan');
@@ -58,4 +123,4 @@ function hitungTotal() {
   // ORDER BUTTON
   function toggleOrder() {
     alert('BAKEKOK');
-  }
+  };
