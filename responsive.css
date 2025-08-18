@@ -73,24 +73,25 @@
     margin-top: 10px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   }
+  
   /* ABOUT */
   .about-container {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: none;
-    max-width: 80%;
     margin: 30px auto;
     padding: 20px;
-    justify-content: center;
-    align-content: stretch;
   }
   section .hidden {
     display: inline;
+    text-align: center;
   }
   h2 {
     text-align: center;
-    
   }
   
-   
+  #lokjo, #promo {
+    padding-top: 25px;
+    font-size: 2rem;
+  }
