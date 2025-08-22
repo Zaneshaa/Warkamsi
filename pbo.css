@@ -190,9 +190,6 @@ input, select {
 section .hidden {
   display: none;
 }
-.about-container:hover {
-  transform:translateY(-10px);
-}
 
 section p {
   font-size: 24px;
