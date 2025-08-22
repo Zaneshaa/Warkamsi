@@ -186,11 +186,35 @@ input, select {
   border: none;
   margin: 30px auto;
   max-width: 90%;
-}
-section .hidden {
-  display: none;
+  overflow: none;
+  
 }
 
+section .hidden {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  padding: 0 30px;
+  transform: translateY(-20px);
+  transition: max-height 0.5s ease, 
+              opacity 0.4s ease, 
+              visibility 0.4s ease, 
+              padding 0.4s ease, 
+              transform 0.4s ease;
+}
+section div:not(.hidden) {
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+  padding: 20px 30px;
+  transform: translateY(0);
+  transition: max-height 0.5s ease, 
+              opacity 0.4s ease, 
+              visibility 0.4s ease, 
+              padding 0.4s ease, 
+              transform 0.4s ease;
+}
 section p {
   font-size: 24px;
   margin-bottom: 5px;
