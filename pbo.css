@@ -1,274 +1,104 @@
-/* UNIVERSAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Oswald, Belanosima-semibold;
-  letter-spacing: 1;
-}
-body {
-  font-size: 17px;
-  color: whitesmoke;
-  line-height: 1.6;
-  background: rgba(0, 0, 0, 0.5);
-  background-image: url('img3.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment:fixed ;
-  backdrop-filter: blur(3px);
-  margin: 0;
-  padding: 0;
-  padding-top: 80px;
-  min-height: 100vh;
-}
-.container {
-  padding: 0 15px;
-  margin: 0 auto;
-  max-width: 100%;
-}
-main {
-  min-height: 90vh;
-  align-content: center;
-  align-items: center;
-}
-.main-content {
-  min-height: 90vh;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* HEADER */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+  <link rel="stylesheet" href="pbo.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="responsive.css" type="text/css" media="all" />
+  <!-- ICON -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet"type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <title>Warkamsi/About</title>
+</head>
+<body>
+    <header class="header">
+    <div id="navbar"></div>
+  </header>
+  <main>
+    <section class="about-container" aria-labelledby="Cerita Abang">
+      <div id="about-me">
+        <h3 id="head-about-me">Cerita Abang</h3>
+      </div>
+      <div id="psatu" class="hidden">
+          <p>Halo! Gue Amba, fans sejati <span style="color: crimson;">Manchester United</span>  yang kebetulan jago masak Indomie hehe.</p>
+          <p>Dulu gue cuma mahasiswa biasa yang sering kelaparan tengah malam. Setiap kali lapar, pilihan cuma warung tutup atau beli instan di minimarket. Dari situ gue kepikiran - pasti banyak yang ngalamin hal sama!</p>
+          <p>Passion gue masak dimulai dari ngekos. Temen-temen sering minta dibuatin Indomie karena kata mereka 'beda' rasanya. Ternyata rahasia kecilnya di bumbu racikan sendiri dan telur ayam kampung yang selalu fresh.</p>
+          <p>Sekarang alhamdulillah warmindo jadi tempat nongkrong favorit, terutama buat sesama <span style="color: crimson;">Red Devils</span> yang butuh tempat nobar sambil makan enak. Gue seneng banget liat kalian pada bahagia makan di sini!</p>
+      </div>
+    </section>
+    <section class="about-container" aria-labelledby="Sejarah Warkamsi">
+      <div id="about-warkamsi">
+        <h3 id="head-about-warkamsi">Sejarah Warkamsi</h3>
+      </div>
+        <div id="pdua" class="hidden">
+          <p><b>2018</b> - Mulai dari gerobak kecil di depan kos-kosan Jl. Sudirman</p>
+          <p><b>2019</b> - Pindah ke ruko kecil, mulai terkenal di kalangan mahasiswa</p>
+          <p><b>2020</b> - Survive pandemi dengan fokus delivery, menu bertambah</p>
+          <p><b>2021</b> - Jadi official nobar spot Manchester United fans lokal</p>
+          <p><b>2022</b> - Grand opening tempat sekarang, tambah meja & TV besar</p>
+          <p><b>2024</b> - Jadi warmindo favorit se-kelurahan, 200+ customer tetap</p>
+        </div>
+    </section>
+    <section class="about-container" aria-labelledby=" Lokasi & Jam Operasional">
+      <div id="about-loh">
+        <h3 id="head-about-loh">Lokasi & Jam Operasional</h3>
+        <div id="ptiga" class="hidden">
+        <p><b>Alamat</b>: Jl. Sudirman No. 45, Belakang Kampus</p>
+        <p><b>Operating Hours</b>: Senin-Minggu: 16:00 - 02:00<br>
+        Khusus Match King <span style="color: crimson;">Emyu</span>: Fleksibel</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script type="text/javascript" src="pbo.js" charset="utf-8"></script>
+<script>
+<!-- ABOUT ME -->
+const headCerita = document.getElementById('about-me');
+const p1 = document.getElementById('psatu');
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background: rgba(255,255,255, 0.95);
-  color: hsl(234, 89.5%, 73.9%);
-  padding: 15px;
-  z-index: 1000;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul{
-  width: 100%;
-  list-style: none;
-  text-align: center;
-}
-
-nav ul.hidden {
- display: none;
-}
-
-ul li {
-  font-size: 17px;
-  border-radius: 5px;
-}
-
-ul li:hover {
-  background: linear-gradient(90deg,hsl(230, 93.5%, 81.8%), hsl(252, 94.7%, 85.1%));
-}
-
-li a {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  text-decoration: none;
-  color: #333;
-  text-align: center;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 28px;
-}
-
-.menu-icon {
-  font-size: 28px;
-  cursor: pointer;
-  align-items: center;
-  padding: 4px;
-  border-radius: 5px;
-}
-
-.menu-icon:hover {
-  cursor: pointer;
-  color: #333;
-  background: hsl(252, 94.7%, 85.1%);
-}
-
-/* HOME */
-
-section h3 {
-  color: rgba(255, 255, 255, 0.90);
-  text-align: center;
-  font-weight: bold;
-  font-size: 32px;
-}
-
-.p2 {
-  color: rgba(255 ,255 ,255 ,0.85);
-  font-size: 19px;
-  /* line-height: 1.5; */
-  padding:20px 30px;
-}
-.cta-button {
-  background: linear-gradient(90deg,hsl(230, 93.5%, 81.8%), hsl(252, 94.7%, 85.1%));
-  border: none;
-  border-radius: 50px;
-  padding: 15px 25px;
-}
-.cta-button a {
-  text-decoration: none;
-  color: #333;
-  font-size: 19px;
-  font-weight: bold;
-}
-
-/* ORDER */
-form {
-  width: 100%;
-  padding: 15px;
-  /* margin: 80px auto; */
-  background: white;
-  border-radius: 10px;
-}
-
-input, label, select {
-  color: #333;
-  font-size: 17px;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: none;
-  display: block;
-  width: 100%;
-}
-
-input, select {
-  background: rgba(0, 0, 0, 0.03);
-}
-
-.wkwk {
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-  color: #333;
-}
-
-.submit-btn {
-  background: linear-gradient(90deg,hsl(230, 93.5%, 81.8%), hsl(252, 94.7%, 85.1%));
-  color: whitesmoke;
-  border: none;
-  font-size: 17px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* ABOUT */
-.about-container {
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 10px;
-  border: none;
-  margin: 30px auto;
-  max-width: 90%;
-  overflow: none;
+headCerita.addEventListener("click",(e) => {
+  e.stopPropagation();
   
-}
+  p2.classList.add('hidden');
+  p3.classList.add('hidden');
+  
+  p1.classList.toggle('hidden');
+});
 
-section .hidden {
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  padding: 0 30px;
-  transform: translateY(-20px);
-  transition: max-height 0.5s ease, 
-              opacity 0.4s ease, 
-              visibility 0.4s ease, 
-              padding 0.4s ease, 
-              transform 0.4s ease;
-}
-section div:not(.hidden) {
-  max-height: 1000px;
-  opacity: 1;
-  visibility: visible;
-  padding: 20px 30px;
-  transform: translateY(0);
-  transition: max-height 0.5s ease, 
-              opacity 0.4s ease, 
-              visibility 0.4s ease, 
-              padding 0.4s ease, 
-              transform 0.4s ease;
-}
-section p {
-  font-size: 24px;
-  margin-bottom: 5px;
-  font-weight: 400;
-}
 
-/* PROMO */
-.promo {
-  max-width: 90%;
-  margin: 30px auto;
-  padding: 10px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-}
-.promo h3 {
-  padding-bottom: 15px;
-}
-.promo p {
-  text-align: center;
-}
+// ABOUT WARKAMSI
+const headWrkmsi = document.getElementById('about-warkamsi');
+const p2 = document.getElementById('pdua');
 
-/* FOOTER */
-.footer {
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  color: rgba(255, 255, 255, 0.85);
-  background: #333;
-}
+headWrkmsi.addEventListener("click", (e) => {
+  e.stopPropagation();
+  
+  p1.classList.add('hidden');
+  p3.classList.add('hidden');
+  
+  p2.classList.toggle('hidden');
+});
 
-#lokjo, #promo {
-  padding: 20px 0;
-  font-size: 24px;
-}
+// ABOUT LOH
+const headLoh = document.getElementById('about-loh');
+const p3 = document.getElementById('ptiga');
 
-#contentpromo.hidden, #contentlokjo.hidden {
-  display: none;
-}
+headLoh.addEventListener("click", (e) => {
+  e.stopPropagation();
+  
+  p1.classList.add('hidden');
+  p2.classList.add('hidden');
+  
+  p3.classList.toggle('hidden');
+});
 
-.sosmed-grid {
-  padding: 10px 0;
-  display: flex;
-  flex-direction: row;
-  width: 400px;
-  justify-content: space-evenly;
-}
-
-.sosmed-card {
-  font-size: 40px;
-}
-
-.footcpr {
-  text-align: center;
-  padding: 10px 0;
-}
+</script>
+</body>
+  </html>
