@@ -184,7 +184,7 @@ input, select, option {
   color: rgba(255, 255, 255, 0.85);
   padding: 10px;
   border: none;
-  margin: 30px auto;
+  margin: 20px auto;
   max-width: 90%;
   text-align: center;
   cursor: pointer;
@@ -206,7 +206,7 @@ section div:not(.hidden) {
   max-height: 1000px;
   opacity: 1;
   visibility: visible;
-  padding: 20px 30px;
+  padding: 10px 30px;
   transform: translateY(0);
   transition: min-height 0.5s ease, 
               opacity 0.4s ease, 
@@ -237,6 +237,7 @@ section p {
 }
 .promo p {
   text-align: center;
+  line-height: 1.4;
 }
 
 /* FOOTER */
@@ -283,4 +284,5 @@ section p {
   text-align: center;
   padding-top: 15px;
   margin-top: 10px;
-}
+  }
+  
