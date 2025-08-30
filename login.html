@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS -->
+  <link rel="stylesheet" href="pbo.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="responsive.css" type="text/css" media="all" />
+  <!-- ICON -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet"type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <title>Warkamsi/Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="input-grup">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-grup">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <span class="pw-toggle" onclick="togglePassword()"><i class="ph ph-eye-slash"></i>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+            <p id="errorMsg" class="error-msg">Username atau Password salah!</p>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="pbo.js" charset="utf-8"></script>
+    <script>
+        const cUsn = "Jude";
+        const cPw = "Ambalingham";
+
+        function togglePassword() {
+            const pwInput = document.getElementById('password');
+            
+            if (pwInput.type === 'password') {
+                pwInput.type = 'text';
+                eyeIcon.className = 'ph ph-eye';
+            } else {
+                pwInput.type = 'password';
+                eyeIcon.className = 'ph ph-eye-slash';
+            }
+        }
+
+        document.getElementById('login-form').addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('errorMsg');
+
+            if (username === cUsn && password === cPw) {
+                errorMsg.style.display = 'none';
+                window.location.href = 'home.html';
+            } else {
+                errorMsg.style.display = 'block';
+            }
+        });
+
+    </script>
+</body>
+</html>
