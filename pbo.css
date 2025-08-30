@@ -71,10 +71,11 @@ nav ul.hidden {
  display: none;
 }
 
-ul li {
+ul li{
   font-size: 17px;
   border-radius: 5px;
 }
+
 
 ul li:hover {
   background: linear-gradient(90deg,hsl(230, 93.5%, 81.8%), hsl(252, 94.7%, 85.1%));
@@ -106,6 +107,53 @@ li a {
   cursor: pointer;
   color: #333;
   background: hsl(252, 94.7%, 85.1%);
+}
+
+/* LOGIN */
+.login-btn {
+font-size: 17px;
+padding: 5px 10px;
+max-width: 100vh;
+width: 100%;
+margin: 0 auto;
+background: linear-gradient(135deg, #448be9, #3c51d7);
+border: none;
+border-radius: 5px;
+}
+
+#login-form h2 {
+  color: #333;
+  text-align: center;
+}
+.input-grup {
+  position: relative;
+}
+
+.pw-toggle {
+  position: absolute;
+  right: 15px;
+  top: 77%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.pw-toggle:hover {
+  color: #333;
+}
+
+/* Kasih space di input untuk icon */
+#password {
+  padding-right: 45px;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
 }
 
 /* HOME */
@@ -184,7 +232,7 @@ input, select, option {
   color: rgba(255, 255, 255, 0.85);
   padding: 10px;
   border: none;
-  margin: 20px auto;
+  margin: 30px auto;
   max-width: 90%;
   text-align: center;
   cursor: pointer;
@@ -206,7 +254,7 @@ section div:not(.hidden) {
   max-height: 1000px;
   opacity: 1;
   visibility: visible;
-  padding: 10px 30px;
+  padding: 20px 30px;
   transform: translateY(0);
   transition: min-height 0.5s ease, 
               opacity 0.4s ease, 
@@ -237,7 +285,6 @@ section p {
 }
 .promo p {
   text-align: center;
-  line-height: 1.4;
 }
 
 /* FOOTER */
@@ -284,5 +331,4 @@ section p {
   text-align: center;
   padding-top: 15px;
   margin-top: 10px;
-  }
-  
+}
