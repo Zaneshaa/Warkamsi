@@ -9,6 +9,7 @@ const navbar = `<nav class="navbar">
         <li><a href="order.html">Order</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="promo.html">Promo</a></li>
+        <li><a href="login.html" onclick="logout()">Log Out</a></li>
       </ul>
     </nav>
 `
