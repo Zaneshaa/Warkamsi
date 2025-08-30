@@ -27,15 +27,35 @@
   
   ul li {
     font-size: 1.2rem;
-    padding: 0 40px;
+    padding: 0 15px;
   }
-
+  ul li i {
+  font-size: 1.5rem;
+  margin: auto;
+  }
   li a {
     display: flex;
     flex-direction: row;
     padding: auto 20px;
   }
   
+/* LOGIN */
+
+.login-btn {
+font-size: 17px;
+padding: 5px 10px;
+max-width: 110vh;
+width: 100%;
+margin: 0 auto;
+background: linear-gradient(135deg, #448be9, #3c51d7);
+border: none;
+border-radius: 5px;
+}
+
+.pw-toggle {
+  top: 75%;
+}
+
   /* HOME */
   section h3 {
     font-size: 2rem;
