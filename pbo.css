@@ -111,14 +111,14 @@ li a {
 
 /* LOGIN */
 .login-btn {
-font-size: 17px;
-padding: 5px 10px;
-max-width: 100vh;
+font-size: 18px;
+letter-spacing: 1px;
+background: hsl(234, 89.5%, 73.9%);
+padding: 8px 10px;
 width: 100%;
-margin: 0 auto;
-background: linear-gradient(135deg, #448be9, #3c51d7);
-border: none;
+margin-top: 5px;
 border-radius: 5px;
+border: none;
 }
 
 #login-form h2 {
