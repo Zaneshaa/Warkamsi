@@ -42,14 +42,8 @@
 /* LOGIN */
 
 .login-btn {
-font-size: 17px;
-padding: 5px 10px;
-max-width: 110vh;
-width: 100%;
-margin: 0 auto;
-background: linear-gradient(135deg, #448be9, #3c51d7);
-border: none;
-border-radius: 5px;
+  background: linear-gradient(90deg,hsl(230, 93.5%, 81.8%), hsl(252, 94.7%, 85.1%));
+  margin-top: 8px;
 }
 
 .pw-toggle {
